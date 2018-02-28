@@ -1,28 +1,28 @@
-3.1.11 Section Review
-1. -35d  ;decimal
--35h ;hexadecimal
--35q/o ;octal
--35b ;binary
-2. Yes, A5h is a valid hexadecimal literal.
+3.1.1 Section Review:
+1.
+2. No, A5h is not a valid hexadecimal literal.
 3. No, the multiplication operator does not have higher precedence than the division operator.
-4.
-3.2.4 Section Review
+4. (((4 * 3) / 6 )+ (12 – 2)) % 6 = 0
+
+3.2.4 Section Review:
+
 4.  eax is the register that holds the sum.
-5. 
-3.3.3 Section Review
+5. INVOKE ExitProcess, 0 halts the program. 
+
+3.3.3 Section Review:
+
 1.  Object files and listing files are produced by the assembler. 
-2. False
+2. True
 3. True
 4.  Loader reads and executes programs.
-3.4.13 Section Review
-1. .data?
-SWORD 16 DUP(?)
-2. .data?
-BYTE 8 DUP(?)
-3. .data?
-SBTYE  8DUP(?)
-4. .data?
-QWORD 64DUP(?)
+
+3.4.13 Section Review:
+
+1. value1 SWORD ?
+2. value2 BYTE ?
+3. value3 DUP ?
+4. value4 QWORD ?
 5. SDWORD can hold a 32-bit signed integer.
+
 3.5.5 Section Review
 3. 
