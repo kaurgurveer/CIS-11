@@ -26,3 +26,10 @@
 
 3.5.5 Section Review
 3. 
+
+3.9.1 Short Answer
+5. The difference between big endian and little endian is for little endian the order goes from low to high while the order for big endian goes from high to low.
+6. A symbolic constant might be used rather than an integer literal code because it makes the statement more self-describing and it is good style.
+25. DWORD and SDWORD creates a 32—bit signed integer variable.
+3.9.2 Algorithm Workbench
+1. A variable of type DWORD can be assigned a negative value. There is no enforcement by the assembler’s type checking and that it only looks at the sizes of the operand. 
