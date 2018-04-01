@@ -1,35 +1,70 @@
-3.1.1 Section Review:
-1.
-2. No, A5h is not a valid hexadecimal literal.
-3. No, the multiplication operator does not have higher precedence than the division operator.
-4. (((4 * 3) / 6 )+ (12 – 2)) % 6 = 0
+3.1.1 Section Review
+	1. -35d  ;decimal
+	-DDh ;hexadecimal
+	-335o ;octal
+	-11011101b ;binary
+	2. No, A5h is not a valid hexadecimal literal.
+	3. No, the multiplication operator does not have higher precedence than the division operator.
+	4. (((4 * 3) / 6 )+ (12 – 2)) % 6 = 0
 
-3.2.4 Section Review:
+	3.2.4 Section Review
 
-4.  eax is the register that holds the sum.
-5. INVOKE ExitProcess, 0 halts the program. 
+	4.  eax is the register that holds the sum.
+	5. INVOKE ExitProcess, 0 halts the program. 
 
-3.3.3 Section Review:
+	3.3.3 Section Review
 
-1.  Object files and listing files are produced by the assembler. 
-2. True
-3. True
-4.  Loader reads and executes programs.
+	1.  Object files and listing files are produced by the assembler. 
+	2. True
+	3. True
+	4.  Loader reads and executes programs.
 
-3.4.13 Section Review:
+	3.4.13 Section Review
+  
+	1. value1 SWORD ?
+	2. value2 BYTE ?
+	3. value3 DUP ?
+	4. value4 QWORD ?
+	5. SDWORD can hold a 32-bit signed integer.
 
-1. value1 SWORD ?
-2. value2 BYTE ?
-3. value3 DUP ?
-4. value4 QWORD ?
-5. SDWORD can hold a 32-bit signed integer.
-
-3.5.5 Section Review
-3. 
+	3.5.5 Section Review
+	3. ArraySize = ($ - myArray)
 
 3.9.1 Short Answer
-5. The difference between big endian and little endian is for little endian the order goes from low to high while the order for big endian goes from high to low.
-6. A symbolic constant might be used rather than an integer literal code because it makes the statement more self-describing and it is good style.
-25. DWORD and SDWORD creates a 32—bit signed integer variable.
-3.9.2 Algorithm Workbench
-1. A variable of type DWORD can be assigned a negative value. There is no enforcement by the assembler’s type checking and that it only looks at the sizes of the operand. 
+
+4. The term assembler language is not quite right because assembler is when is translates the source code into machine code.
+5. The difference between big endian and little endian is for little endian the order goes from low to high. The least significant byte is stored at the first memory address. The order for big endian goes from high to low.
+6. A symbolic constant might be used rather than an integer literal code because it makes the statement more self-describing. 
+25. SDWORD creates a 32-bit signed integer variable.
+
+3.9.2 Algorithm Workbench 
+
+4. A negative value cannot be assigned to a variable of type DWORD since it only represents unsigned values. The assembler’s type checking does not check the type of variable it is assigned. 
+7. array1 DWORD 120 DUP(?)
+13. Str DWORD 500 DUP(“TEST”)
+
+3.10 Programming Exercise:
+1. 
+ExitProcess proto
+
+.data
+A DWORD 12
+B DWORD 3
+C DWORD 10
+D DWORD 5
+
+.code
+main proc
+   mov  eax,A
+   mov ebx, B
+   mov ecx, C
+   mov edx, D
+
+  add eax, ebx
+  add ecx, edx
+  sub eax, ecx
+  mov A, eax
+  call ExitProcess
+
+main endp
+end
