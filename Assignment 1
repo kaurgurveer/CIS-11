@@ -1,0 +1,171 @@
+1. 1. 3 Section Review:
+
+1.	Assemblers translate source code from assembly language into machine language, while linkers join the files created by the assembler into an executable program. 
+3.  By a one-to-many relationship, it means that one statement in a high level    
+ language becomes multiple instructions in machine language. 
+8. Type checking on pointer variables is stronger in C and C++.
+12.  move eax, Y
+        move ebx, 4
+        imul ebx
+        add eax, 3
+        move X, eax
+
+1. 2. 1 Section Review
+
+2. Translated programs are often executed more quickly than interpreted ones because the L1 program can be converted into a L0 program and then be executed directly on the computer hardware where as for interpreted programs the statements have to be decoded before it can be executed. 
+3. true
+10. Statements at the assembly language level of a virtual machine are translated into instruction set architecture.
+
+1. 3. 9 Section Review
+2. 
+a. 248
+b. 202
+c. 240
+3. 
+a. 00010001
+b. 101000000
+c. 00011110
+5. 
+a. 1000001 – 65 needs 7 bits
+b. 110011001 – 409 needs 9 bits
+c. 100000000000001 16385 needs 15 bits
+6.
+a. 35DA
+b. CEA3
+c. FEDB
+7.
+a. 1010 0100 0110 1001 0011 1111 1011 1100
+b. 1011 0110 1001 0111 1100 0111 1010 0001
+c. 0010 1011 0011 1101 1001 0100 0110 0001
+1. 7. 1 Short Answer
+1.	The most significant bit is the left bit in a 8-bit binary number.
+2.	
+a. 53
+b. 150
+c. 204
+3. 
+a. 10001010
+b. 10010110
+c. 00100001
+4. 11101110
+5. 
+a. 16 bits
+b. 32 bits
+c. 64 bits
+d. 128 bits
+6. 
+a. 111111111111 – 12 bits
+b. 1111111111111110 – 16 bits
+c. 1010010101001111 – 16 bits
+7. 
+a. 35DA
+b. CEA3
+c. FEDB
+8. 
+a. 0000 0001 0010 0110 1111 1001 1101 0100
+b. 0110 1010 1100 1101 1111 1010 1001 0101
+c. 1111 0110 1001 1011 1101 1100 0010 1010
+9. 
+a. 58
+b. 447
+c. 4097
+10. 
+a. 98
+b. 1203
+c. 671
+11. 
+a. E8
+b. EB5
+12.
+a. EB
+b. D3
+13.
+a. 27641
+b. -16093
+14. 
+a. 19666
+b. -32208
+15. 
+a. -75
+b. 42
+c. -16
+16.
+a. -128
+b. -52
+c. -73
+17. 
+a. 11111011
+b. 11010110
+c. 11110000
+18.
+a. 10111000
+b. 10011110
+c. 11100110
+19. 
+a. AB2
+b. 1106
+20.
+a. B82
+b. 1316
+21. decimal: 66 hexadecimal: 42
+22. decimal: 71 hexadecimal: 47
+25.  A     B      AvB     (AvB)’
+	 T      T       T             F
+	 T      F       T             F
+	 F      T       T             F
+	 F      F       F             T
+
+1. 7. 2 Algorithm Workbench
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+
+int convertBinary(string);
+
+int main()
+{
+string binaryInt;
+
+cout << "Enter a binary integer: " << endl;
+cin >> binaryInt;
+cout << "Decimal: " << convertBinary(binaryInt) << endl;
+
+return 0;
+}
+
+int convertBinary(string binary)
+{
+int size = binary.size();
+int decimal = 0;
+int index = 0;
+
+if (size > 16)
+{
+cout << "Binary integer is more than 16 bit" << endl;
+}
+else
+{
+for (int i = size - 1; i >= 0; i--)
+{
+if (binary[i] == '1')
+{
+decimal += pow(2, index);
+}
+index++;
+}
+}
+
+return decimal;
+}
+
+
+1. 4. 2 Section Review
+1. Not X or Y
+2. X and Y
+3. F v T 
+     T
+4.	T’ 
+    F
+5.	T v F
+      T
