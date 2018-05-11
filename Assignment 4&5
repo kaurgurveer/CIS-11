@@ -1,32 +1,32 @@
 4.2.8 Section Review
-	1. inc val2
-	2. sub eax, val3
-	3. mov ax, val4
-     sub val2, ax
-	4. The value of Carry flag is 0 and the value of sign flag is 1. 
-	5.The value of overflow flag is 1 and the value of the signed flag is 1. 
-	6. a. CF = 1   SF = 0   ZF = 1 OF = 0
-     b. CF =  0   SF = 1   ZF = 0 OF = 1
-     c.  CF = 0    SF = 1   ZF = 0  OF = 0
+1. inc val2
+2. sub eax, val3
+3. mov ax, val4
+   sub val2, ax
+4. The value of Carry flag is 0 and the value of sign flag is 1. 
+5.The value of overflow flag is 1 and the value of the signed flag is 1. 
+6. a. CF = 1   SF = 0   ZF = 1 OF = 0
+   b. CF =  0   SF = 1   ZF = 0 OF = 1
+   c.  CF = 0    SF = 1   ZF = 0  OF = 0
 	 
-	4.3.8 Section Review
-	1. False
-	2. False
-	3. True
-	4. False
-	5. True
+4.3.8 Section Review
+1. False
+2. False
+3. True
+4. False
+5. True
 	 
-	4.4.5 Section Review
-	4. True
-	5. a. AL = 10h
-	b. AL =  40h
-	c. AX = 3Bh
-	d. EDX = 3
-	e. EDX = 3
-  f. EAX = 2
-  
-  4.10 Programming Exercise 
-  7. 
+4.4.5 Section Review
+4. True
+5. a. AL = 10h
+b. AL =  40h
+c. AX = 3Bh
+d. EDX = 3
+e. EDX = 3
+f. EAX = 2
+
+4.10 Programming Exercise 
+7. 
   
 ExitProcess proto
 
