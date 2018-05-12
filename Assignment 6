@@ -1,0 +1,25 @@
+10.
+ExitProcess proto
+
+.data
+array DWORD 1, 1
+count DWORD 47
+
+.code
+main proc
+mov esi, OFFSET array
+add esi, TYPE ARRAY
+mov ecx, count 
+
+L1:
+mov eax, [esi - 4]
+mov ebx, [esi - 8]
+add eax, ebx
+mov [esi], eax
+add esi, TYPE array
+LOOP L1
+
+call ExitProcess
+
+main endp
+end
