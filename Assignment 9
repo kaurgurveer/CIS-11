@@ -1,1 +1,26 @@
+1.	Stack frame is a collection of data on the stack that is connected to one subroutine call. Data is pushed onto the stack 
+and stack frame represents the function call and its argument data. It exists only during runtime and is used to create and 
+remove temporary variables. It consists of local variables, copies of registers, argument parameters, and return address, 
+which is a reference offset to ebp. The esp is always changing when things are being pushed and popped off the stack. 
+The ebp is used to reference items within the stack frame. It is used as a base pointer for the function so parameters 
+and local variables would be fixed as esp moved. 
 
+2.	Calling convention is an implementation level for how subroutines get their parameters from their caller and how they return a result.
+X86 calling conventions usually pass arguments on the stack, while return value is passed in a register.  Calling Conventions 
+describe the interface of code. It deals with how parameters should be passed, which registers should be reserved, the order 
+in which parameters are allocated, and how a function call is divided because of the stack. X86 calling conventions take advantage 
+of extra register space in order to pass additional arguments. 
+
+3.	The book examples start functions with push ebp and mov ebp, esp because it creates a new stack frame within the 
+callee while preserving the stack frame in the caller. The function stores ebp and sets ebp at the top of the stack 
+so that data is saved in stack and the function can push and pop elements.
+
+4.	The x64 equivalient to push ebp and mov ebp, esp is push rbp and mov rbp, rsp.
+
+5.	The differences between Microsoft x64 calling convention and System V AMD64 ABI calling convention is Microsoft x64 calling 
+convention is followed on windows and UEFI while System V AMD64 ABI is followed on Solaris, Linux, FreeBSD, macOS. Microsoft x64 
+has a shadow space, which is used to spill registers like rcx, rdx and r8; however system V does not have the shadow space. 
+
+6.	a in RCX, b in RDX, c in R8, d in R9, e pushed on stack, f pushed on stack
+
+7.	f in RCX, e in RDX, d in R8, c in R8, b pushed on stack, a pushed on stack
