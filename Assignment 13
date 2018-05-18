@@ -21,7 +21,6 @@ INVOKE PrintArray, ADDR array, LENGTHOF array
 
 invoke ExitProcess, 0
 main endp
-end main
 
 PrintArray PROC USES eax ecx edx esi,
 pArray:PTR DWORD,
@@ -66,3 +65,5 @@ LOOP L1
 
 L4: ret
 BubbleSort ENDP
+
+end main
